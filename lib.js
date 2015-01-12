@@ -45,7 +45,7 @@ lib.generateFormTextField = function(name) {
 }
 
 lib.generateFormTextField = function(name) {
-    return "not yet implemented"
+    return '<input type="text" name="' + name + '">'
 }
 
 lib.generateFormTextFieldWithLabel = function(name, label) {
