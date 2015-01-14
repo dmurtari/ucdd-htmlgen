@@ -19,3 +19,9 @@ The DEBUG=* prefix turns on all debugging messages.
 # Development
 
 Many of the functions in 'lib.js' have not been implemented yet. Make a fork and start implementing them. Once you are done, commit your implementation and make a pull request.
+
+# Newly Implemented Functions for Individual Challenge 1
+
+`generateTableRow`, `generateDropdownList`, `generateYoutubeVideoEmbeddableFrame`
+`generateTable` (In `generateTable`, the example in `test.js` doesn't seem to
+include the `<table>` tags, so I have included them in `generateTable`)
