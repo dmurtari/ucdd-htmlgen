@@ -30,8 +30,8 @@ lib.generateUnorderedList = function(arrayOfText) {
 
 lib.generateTableRow = function (arrayOfText) {
     row = "<tr>"
-    for (element in arrayOfText) {
-        row += ("<td>" + element + "</td>")
+    for (var element in arrayOfText) {
+        row += ("<td>" + arrayOfText[element] + "</td>")
     }
     row += "</tr>"
 
@@ -39,7 +39,13 @@ lib.generateTableRow = function (arrayOfText) {
 }
 
 lib.generateTable = function(twoDimensionalArrayOfText) {
-    return "not yet implemented"
+    table = "<table>"
+    for (var row in twoDimensionalArrayOfText) {
+        table += lib.generateTableRow(twoDimensionalArrayOfText[row])
+    }
+    table += "</table>"
+
+    return table
 }
 
 lib.generateHyperLink = function(url, text) {
