@@ -33,7 +33,7 @@ lib.generateTableRow = function (arrayOfText) {
     for (element in arrayOfText) {
         row += ("<td>" + element + "</td>")
     }
-    row += "</td>"
+    row += "</tr>"
 
     return row
 }
@@ -58,8 +58,15 @@ lib.generateFormTextFieldWithLabel = function(name, label) {
     return '<label>' + label + '</label> <input type="text" name="'+ name + '">'
 }
 
-lib.generateDropdownList = function(arrayOfValues, arrayOfText) {
-    return "not yet implemented"
+lib.generateDropdownList = function(arrayOfValues, arrayOfText) {   
+    dropdown = "<select>"
+    for (var i = 0; i < arrayOfValues.length; i++) {
+        dropdown += ('<option value="' + arrayOfValues[i] + '">' + arrayOfText[i]
+                     + '</option>')
+    };
+    dropdown += "</select>"
+
+    return dropdown
 }
 
 lib.generateYoutubeVideoEmbeddableFrame = function(width, height, videoId, allowfullscreen) {
