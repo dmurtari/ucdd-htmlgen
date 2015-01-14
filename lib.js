@@ -29,7 +29,13 @@ lib.generateUnorderedList = function(arrayOfText) {
 }
 
 lib.generateTableRow = function (arrayOfText) {
-    return "not yet implemented"
+    row = "<tr>"
+    for (element in arrayOfText) {
+        row += ("<td>" + element + "</td>")
+    }
+    row += "</td>"
+
+    return row
 }
 
 lib.generateTable = function(twoDimensionalArrayOfText) {
